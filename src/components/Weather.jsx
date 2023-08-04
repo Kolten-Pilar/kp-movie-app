@@ -21,13 +21,18 @@ function Weather() {
     if (form.city == "") {
       alert("Please enter city name");
     } else {
-      // making the api call
+      try {
+         // making the api call
       const res = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&appid=${APIKEY}`
       );
       const data = await res.json();
       // console.log(res);
       setWeather({data : data})
+      } catch (error) {
+        console.log(error);
+      }
+     
     }
   }
 

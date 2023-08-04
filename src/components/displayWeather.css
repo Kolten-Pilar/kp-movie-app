@@ -37,7 +37,8 @@
 
 .displayweather .weather-icon {
   width: 100px;
-
+  background-color: currentColor;
+  border-radius: 50%;
   position: absolute;
   top: 50px;
 }
